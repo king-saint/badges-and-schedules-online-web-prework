@@ -24,11 +24,11 @@ end
 
 def printer(attendees)
       
-        badge_and_room_assignments.each do |name|
+        batch_badge_creator(attendees).each do |name|
            puts name.join(' ')  
     end
-      badge_and_room_assignments << assign_rooms(attendees)
-        badge_and_room_assignments.each do |room|
+     
+        assign_rooms(attendees).each do |room|
           puts room.join(' ')
     end
   
